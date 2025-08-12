@@ -40,3 +40,21 @@ def total_palindromes(n):
         total_palindrome_list.extend(palindromes(k))
     return total_palindrome_list
 
+def prime_test(n):
+    """Tests if the number is prime."""
+    if n < 2:
+        return False
+    for i in range(2, math.isqrt(n)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def palindrome_prime(n):
+    """Returns a list of prime palindromes up to the (n)th digit."""
+    total_palindrome_list = total_palindromes(n)
+    prime_palindrome_list = []
+
+    for p in total_palindrome_list:
+        if prime_test(p):
+            prime_palindrome_list.append(p)
+    return prime_palindrome_list
