@@ -12,8 +12,8 @@ def even_palindrome(n):
     base_palindrome_list = base_palindrome(int(n/2))
     even_palindrome_list = []
     for i in base_palindrome_list:
-        even_palindrome = str(i)+str(i)[::-1]
-        even_palindrome_list.append(int(even_palindrome))
+        palindrome = str(i)+str(i)[::-1]
+        even_palindrome_list.append(int(palindrome))
     return even_palindrome_list
 
 def odd_palindrome(n):
@@ -21,8 +21,8 @@ def odd_palindrome(n):
     base_palindrome_list = base_palindrome(math.floor(n/2)+1)
     odd_palindrome_list = []
     for i in base_palindrome_list:
-            odd_palindrome = str(i)+str(i)[:len(str(i))-1][::-1]
-            odd_palindrome_list.append(int(odd_palindrome))
+            palindrome = str(i)+str(i)[:len(str(i))-1][::-1]
+            odd_palindrome_list.append(int(palindrome))
     return odd_palindrome_list
 
 def palindromes(n):
